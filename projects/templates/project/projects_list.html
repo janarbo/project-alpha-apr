@@ -10,10 +10,12 @@
     <main>
         <div>
             <h1>My Projects</h1>
-            <a href="{% url 'create_project' %}">Create a new project</a>
+            <p><a href="{% url 'create_project' %}">Create a new project</a></p>
+
             {% if projects|length == 0 %}
             <p>You are not assigned to any projects</p>
             {% else %}
+            <div>
             <table>
                 <thead>
                 <tr>
@@ -30,6 +32,7 @@
                     {% endfor %}
                 </tbody>
             </table>
+            </div>
             {% endif %}
 
 
