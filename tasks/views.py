@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from tasks.forms import TaskForm
 from django.contrib.auth.decorators import login_required
 from tasks.models import Task
-from django.views.generic import ListView
+
 
 @login_required
 def create_task(request):
